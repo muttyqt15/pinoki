@@ -4,35 +4,12 @@
     "version": "1.0",
     "description": "Chrome extension for pinoki that will scrape article data and give user information!",
     "icons": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
+        "16": "Pinoki.png",
+        "48": "Pinoki.png",
+        "128": "Pinoki.png"
     },
     "browser_action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icon16.png",
-            "48": "icon48.png",
-            "128": "icon128.png"
-        }
-    },
-    "permissions": [
-        "tabs"
-    ],
-    "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": false
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
-    ]
+        "default_icon": "Pinoki.png",
+        "default_popup": "popup.html"
+    }
 }
