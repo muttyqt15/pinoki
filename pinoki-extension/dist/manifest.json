@@ -7,5 +7,10 @@
         "16": "./assets/Pinoki.png",
         "48": "./assets/Pinoki.png",
         "128": "./assets/Pinoki.png"
+    },
+    "action": {
+        "default_title": "Pinoki Extension",
+        "default_icon": "./assets/Pinoki.png",
+        "default_popup": "popup.html"
     }
 }

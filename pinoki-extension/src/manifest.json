@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Pinoki Extension",
+    "version": "1.0",
+    "description": "Chrome extension for pinoki that will scrape article data and give user information!",
+    "icons": {
+        "16": "./assets/Pinoki.png",
+        "48": "./assets/Pinoki.png",
+        "128": "./assets/Pinoki.png"
+    },
+    "action": {
+        "default_title": "Pinoki Extension",
+        "default_icon": "./assets/Pinoki.png",
+        "default_popup": "popup.html"
+    }
+}
