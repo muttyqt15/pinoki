@@ -1,11 +1,22 @@
-.App {
-  color: white;
-  text-align: center;
+/* FILEPATH: /c:/Users/hayay/Desktop/webdev/projects/pinoki/pinoki-extension/src/App.css */
+
+/* Set the font family and background color for the entire app */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fafc;
 }
 
+/* Center the content in the app */
 .container {
-  width: 15rem;
-  height: 15rem;
-  background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+/* Add some padding and a border to a box */
+.box {
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
 }

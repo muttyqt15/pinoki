@@ -1,15 +1,17 @@
 {
-    "version": "1.0.0",
-    "manifest_version": 3,
-    "name": "Pinoki",
-    "description": "Rakyat melawan misinformasi!",
-    "icons": {
-        "128": "./public/Pinoki.png",
-        "48": "./public/Pinoki.png",
-        "16": "./public/Pinoki.png"
-    },
-    "action": {
-        "default_popup": "dist/js/index.html",
-        "default_title": "Pinoki Popup"
-    }
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Pinoki",
+  "description": "Rakyat melawan misinformasi!",
+  "icons": {
+    "128": "./public/Pinoki.png",
+    "48": "./public/Pinoki.png",
+    "16": "./public/Pinoki.png"
+  },
+  "action": {
+    "default_popup": "dist/js/index.html",
+    "default_title": "Pinoki Popup"
+  },
+  "permissions": ["storage", "activeTab"],
+  "options_page": "dist/js/options.html"
 }
