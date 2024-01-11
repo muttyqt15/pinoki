@@ -1,3 +1,4 @@
+import { User } from "firebase/auth";
 
 export interface FormItemProps {
   type: "text" | "password" | "checkbox" | "email";
@@ -12,7 +13,7 @@ export interface FormItemProps {
 
 export interface FormProps {
   fields: Array<FormItemProps>;
-  onSubmit: <T>(data: T) => void;
+  onSubmit: <T extends User>(data: T) => void;
 }
 
 export interface OutputProps {

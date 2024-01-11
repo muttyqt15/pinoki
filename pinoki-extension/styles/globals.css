@@ -1,0 +1,20 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+}
+
+.popup-text {
+    font-size: medium;
+    font-weight: normal;
+    color: black;
+}

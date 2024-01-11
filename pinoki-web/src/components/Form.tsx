@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { FormProps } from "@/types/formInterfaces"
+import { FormProps } from "@/types/formInterfaces";
 import FormItem from "./FormItem";
 import { cn } from "@/lib/utils";
 
-const Form = (p: FormProps & { className?: string } & { buttonPrompt: string }) => {
+const Form = (
+  p: FormProps & { className?: string } & { buttonPrompt: string }
+) => {
   const getInitialState = () => {
     let initialState: any = {};
     p.fields.forEach((field) => {
@@ -33,8 +35,8 @@ const Form = (p: FormProps & { className?: string } & { buttonPrompt: string }) 
     //   setError(true);
     // } else {
     //   // All required fields are filled, proceed with form submission
-      p.onSubmit(state);
-      setState(getInitialState());
+    p.onSubmit(state);
+    setState(getInitialState());
     // }
   };
   return (
@@ -57,14 +59,9 @@ const Form = (p: FormProps & { className?: string } & { buttonPrompt: string }) 
           <button
             type="submit"
             onClick={handleSubmit}
-            className="blue-btn">
+            className="border-2 p-1 rounded-xl mx-2 px-3 text-slate-500 hover:text-black hover:shadow-md transition transform duration-500 ease-in-out">
             {p.buttonPrompt}
           </button>
-          {error ? (
-            <p className="text-red-400 font-bold tracking-tighter">Fill in all forms!</p>
-          ) : (
-            <p></p>
-          )}
         </div>
       </section>
     </>
