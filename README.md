@@ -1,4 +1,4 @@
-# Pinoki - Rakyat melawan informasi!
+# Pinoki - Rakyat melawan misinformasi!
 
 **Pinoki merupakan sebuah platform inovatif yang bertujuan untuk melawan penyebaran informasi yang salah atau tidak akurat di dunia daring**. Konsep utamanya adalah memberikan kesempatan kepada pengguna untuk turut serta dalam mengidentifikasi, memeriksa, dan melaporkan berita palsu atau informasi yang meragukan.
 
