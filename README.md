@@ -6,10 +6,18 @@ Dengan menggunakan data dari pengguna, Pinoki menerapkan algoritma canggih untuk
 
 # TAHAP MENJALANKAN PINOKI
 
-1. Start the extension (cd pinoki-extension, npm i, npm run build)
+1. Start the extension (cd pinoki-extension, npm i, npm run build), and go to chrome extensions and click **Load Unpacked** on the manifest.json file in pinoki-extension
 
 2. Select suspicious text while running extension
 ![Alt text](/misc/image.png)
 
-3. Report the "hoax"! 
+3. Report the "hoax"
+
+
 ![Alt text](/misc/buttonClick.png) 
+
+# FUNCTIONALITY TO BE ADDED
+4. Add text to database
+5. Finish front-end
+6. Utilize NLP models to do sentiment analysis and provide users with rating
+7. Show results of sentiment analysis and other ML techniques in website and extension popup
