@@ -12,6 +12,17 @@
     "default_popup": "dist/js/index.html",
     "default_title": "Pinoki Popup"
   },
-  "permissions": ["storage", "activeTab"],
-  "options_page": "dist/js/options.html"
+  "permissions": ["storage", "activeTab", "tabs", "scripting"],
+  "options_page": "dist/js/options.html",
+  "background": {
+    "service_worker": "dist/js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/js/contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
 }

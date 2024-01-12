@@ -8,6 +8,8 @@ module.exports = {
   entry: {
     index: path.resolve("./src/index.tsx"),
     options: path.resolve("./src/options/options.tsx"),
+    background: path.resolve("./src/background/background.ts"),
+    contentScript: path.resolve("./src/content-script/contentScript.ts"),
   },
   mode: "development",
   devtool: "inline-source-map",
