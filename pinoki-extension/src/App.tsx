@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import "./tailwind.css";
 import "../components/styles/fonts.css";
+import SuccessPopUp from "../components/SuccessPopUp.jsx" 
 
 function App() {
 
@@ -17,18 +18,19 @@ function App() {
     }
   })
   const handleClick = async () => {
-    // Get current active tab
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    
+    // // Get current active tab
+    // let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   
-    // Execute script to scrape text
-    if (tab.id) {
-      chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        func: scrapeSelectedText,
-      });
+    // // Execute script to scrape text
+    // if (tab.id) {
+    //   chrome.scripting.executeScript({
+    //     target: { tabId: tab.id },
+    //     func: scrapeSelectedText,
+    //   });
   
-      console.log("Running script!");
-    }
+    //   console.log("Running script!");
+    // }
   };
   
   const scrapeSelectedText = () => {
@@ -39,19 +41,44 @@ function App() {
     // TODO: Send selected text to firebase backend
   };
   return (
-    <div className="flex flex-col w-full min-w-[300px] min-h-[300px] overflow-y-scroll overflow-x-hidden p-4 montserrat border rounded-xl">
+    <div className="flex flex-col w-full min-w-[300px] min-h-[300px] overflow-x-hidden p-4 montserrat border rounded-xl">
       <div className="h-1/3 space-x-4 flex">
         <img
           src="/public/Pinoki.png"
           alt="Pinoki mascot!"
           className="h-[72px] w-[72px]"
         />
-        <div className="flex flex-col justify-start w-full">
-          <h1 className="text-lg">Pinoki</h1>
-          <p className="text-xs text-green-600">Rakyat melawan misinformasi!</p>
+        <div className="flex flex-col justify-start w-full mt-5">
+            <h1 className="text-2xl">PINOKI</h1>
+          <p className="text-xs text-green-600 -mt-1">Laporkan Hoax!</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center">
+            <img
+              src="/public/back_button.svg"
+              alt="back button"
+              className="h-[45px] w-[45px]"
+            />
+            <div className="mt-2">
+              {/* Add any additional content here */}
+            </div>
+          </div>
         </div>
       </div>
       <div className="h-1/3 flex flex-col items-center gap-y-4 mt-8 justify-center text-center">
+        <p>
+          Laporan sudah dikirim dan akan segera diproses oleh tim kami.
+        </p>
+        <p>Terima kasih sudah membantu dalam mengurangi misinformasi</p>
+      </div>
+      <div className="mt-3 items-center flex justify-center">
+        <img 
+          src="/public/checkmark.svg"
+          alt="checkmark laporkan hoax"
+          className="h-[40px] w-[40px]"
+        />
+      </div>  
+      {/* <div className="h-1/3 flex flex-col items-center gap-y-4 mt-8 justify-center text-center">
         <p>
           Situs ini tidak mengandung keyword yang terdeteksi oleh sistem kami.
         </p>
@@ -65,6 +92,12 @@ function App() {
           Laporkan hoax!
         </button>
       </div>
+      <div className="h-1/3 flex flex-col items-center gap-y-4 mt-8 justify-center text-center">
+        <p>
+          Situs ini tidak mengandung keyword yang terdeteksi oleh sistem kami.
+        </p>
+        <p>Tidak terdeteksi tidak berarti 100% benar!</p>
+      </div> */}
     </div>
   );
 }
