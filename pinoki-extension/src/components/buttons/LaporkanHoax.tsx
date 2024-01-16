@@ -1,4 +1,3 @@
-import React from "react";
 
 const LaporkanHoaxButton = ({ handleClick }: { handleClick: () => void }) => {
   return (

@@ -1,23 +1,22 @@
 import React, { ChangeEvent } from "react";
 import { FormItemProps, OutputProps } from "../types";
 import "../styles/fonts.css";
-import "../../tailwind.css"
-function FormItem(p: FormItemProps & OutputProps & { className?: string }) {
+import "../../tailwind.css";
+
+export default function FormItem(
+  p: FormItemProps & OutputProps & { className?: string }
+) {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     p.onChange(p.property, e.target.value);
   };
+
   return (
     <>
-      <label htmlFor={p.property} className="">
+      <label htmlFor={p.property} className="signika">
         {p.name}
       </label>
       <input
         type={p.type}
-        name={p.name}
-        placeholder={p.placeholder}
-        id={p.property}
-        value={p.value as string}
-        checked={p.value as boolean} // Checks if form field is filled out
         required={p.required}
         onChange={handleChange}
         autoComplete="off"
@@ -26,5 +25,3 @@ function FormItem(p: FormItemProps & OutputProps & { className?: string }) {
     </>
   );
 }
-
-export default FormItem;
