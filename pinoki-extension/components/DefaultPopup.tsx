@@ -6,7 +6,9 @@ interface DefaultPopupProps {
 const DefaultPopup = ({ handleClick }: DefaultPopupProps) => {
   return (
     <>
-      <h1 className="text-green-200">Hello!</h1>
+      <section className="h-24 flex">
+        <img src="/public/Pinoki_nohands.png" alt="logo" className="h-8 w-8"/>
+      </section>
     </>
   );
 };

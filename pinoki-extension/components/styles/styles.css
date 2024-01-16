@@ -42,3 +42,7 @@
   height: 70px;
   width: 70px;
 }
+
+.animate-ease {
+  @apply transform transition duration-300 ease-in-out
+}
