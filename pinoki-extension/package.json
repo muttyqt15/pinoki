@@ -13,6 +13,7 @@
     "firebase": "^10.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2",
     "react-scripts": "5.0.1",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@types/chrome": "^0.0.256",
     "@types/firebase": "^3.2.1",
+    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.16",
     "copy-webpack-plugin": "^12.0.0",
     "css-loader": "^6.9.0",

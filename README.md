@@ -6,7 +6,7 @@ Dengan menggunakan data dari pengguna, Pinoki menerapkan algoritma canggih untuk
 
 # TAHAP MENJALANKAN PINOKI
 
-1. Start the extension (cd pinoki-extension, npm i, npm run build), and go to chrome extensions and click **Load Unpacked** on the manifest.json file in pinoki-extension
+1. Clone and start the extension (cd pinoki-extension, npm i, npm run build), and go to chrome extensions and click **Load Unpacked** on the manifest.json file in pinoki-extension
 
 2. Select suspicious text while running extension
 ![Alt text](/misc/image.png)

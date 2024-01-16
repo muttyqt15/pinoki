@@ -1,7 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "../tailwind.css";
-import "../../components/styles/fonts.css";
 const Options = () => {
   return (
     <div className="flex flex-col min-h-screen w-full items-center p-4 montserrat">
@@ -16,7 +15,7 @@ const Options = () => {
           <p className="text-sm text-green-600">Rakyat melawan misinformasi!</p>
         </div>
       </div>
-      <div className="poppins text-white mx-20 p-4 mt-6 border rounded-xl bg-green-400 h-screen w-full max-w-2xl md:px-8">
+      <div className="poppins text-white mx-20 p-4 mt-6 border rounded-xl bg-green-400 h-96 w-full max-w-2xl md:px-8">
         <h1 className="text-center text-2xl font-bold ">FAQ</h1>
         <div className="mt-4">
           <h2 className="text-lg poppins font-bold">Apa itu Pinoki?</h2>

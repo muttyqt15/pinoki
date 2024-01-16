@@ -70,7 +70,7 @@ function getHtmlPlugins(chunks) {
   return chunks.map(
     (chunk) =>
       new HTMLPlugin({
-        title: "Pinoki!",
+        title: "Pinoki",
         filename: `${chunk}.html`,
         chunks: [chunk],
       })
