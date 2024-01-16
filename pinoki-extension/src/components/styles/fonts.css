@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+
+.poppins {
+  font-family: "Playpen Sans", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.txt-green {
+  color: #00ff00;
+}

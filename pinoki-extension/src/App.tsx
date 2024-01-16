@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "./tailwind.css";
 import "../components/styles/fonts.css";
-import SuccessPopUp from "../components/SuccessPopUp.jsx" 
+
 
 function App() {
 
