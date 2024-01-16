@@ -1,16 +1,15 @@
 import React, { ChangeEvent } from "react";
 import { FormItemProps, OutputProps } from "../types";
 import "../styles/fonts.css";
-import "../styles/styles.css";
+import "../../tailwind.css"
 function FormItem(p: FormItemProps & OutputProps & { className?: string }) {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     p.onChange(p.property, e.target.value);
   };
   return (
     <>
-      <label htmlFor={p.property} className="signika">
+      <label htmlFor={p.property} className="">
         {p.name}
-        {p.required && <span className="text-red-500 text-xs"> *</span>}
       </label>
       <input
         type={p.type}
@@ -22,7 +21,7 @@ function FormItem(p: FormItemProps & OutputProps & { className?: string }) {
         required={p.required}
         onChange={handleChange}
         autoComplete="off"
-        className="border-2 border-gray-300 focus:border-blue-500 px-2 py-1 rounded-xl animate-ease"
+        className="border border-gray-300 focus:border-green-200 px-2 py-1 rounded-xl bg-gray-200"
       />
     </>
   );

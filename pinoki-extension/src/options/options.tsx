@@ -1,7 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "../tailwind.css";
-import "../../components/styles/fonts.css";
 const Options = () => {
   return (
     <div className="flex flex-col min-h-screen w-full items-center p-4 montserrat">

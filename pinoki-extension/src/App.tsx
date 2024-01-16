@@ -1,10 +1,12 @@
-import React, { useState } from "react";
 import "./App.css";
 import "./tailwind.css";
-import "../components/styles/fonts.css";
+import "./components/styles/fonts.css";
 // import defaultPopup from "../components/DefaultPopup"
-import SuccessHeader from "../components/headings/SuccessHeader";
-import LaporkanHoaxButton from "../components/buttons/LaporkanHoax";
+import SuccessHeader from "./components/headings/SuccessHeader";
+import LaporkanHoaxButton from "./components/buttons/LaporkanHoax";
+import HoaxForm from "./components/HoaxForm";
+import { usePageContext } from "./context/PageContext";
+import HoaxSent from "./components/HoaxSent";
 function App() {
   // Handler to recieve emails from contentscript
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -16,17 +18,15 @@ function App() {
       console.log("We don't know what happened!");
     }
   });
-  const [click, setClick] = useState(false);
 
-  const handleClick = async () => {
-    setClick((prev) => !prev);
-  };
+  // const handleClick = async () => {
+  //   setClick((prev) => !prev);
+  // };
 
+  const { currentPage, updateCurrentPage } = usePageContext();
   const handleLaporkanHoax = () => {
-    console.log("Laporkan hoax clicked!");
-    setClick((prev) => !prev);
+    updateCurrentPage("hoaxform");
   };
-
   const DefaultPopup = () => {
     return (
       <div className="w-full h-full">
@@ -38,27 +38,18 @@ function App() {
           Tidak terdeteksi tidak berarti 100% benar!
         </p>
         <div className="mt-12">
-        <LaporkanHoaxButton handleClick={handleLaporkanHoax} />
-
+          <LaporkanHoaxButton handleClick={handleLaporkanHoax} />
         </div>
       </div>
     );
   };
-  const hoaxInputPopup = () => {
-    return (
-      <>
-        <div className="text-green-200">Hello world!</div>
-        <button onClick={handleClick} className="text-black">
-          Click me
-        </button>
-      </>
-    );
-  };
-  const flaggedWebsiteOpen = true;
+
   return (
-    <div className="flex flex-col w-[300px] h-[300px] overflow-y-hidden p-4 montserrat border rounded-xl">
-      {click ? hoaxInputPopup() : DefaultPopup()}
-    </div>
+      <div className="flex flex-col w-[300px] min-h-[300px] overflow-y-hidden p-4 montserrat border rounded-xl">
+        {currentPage === "default" && DefaultPopup()}
+        {currentPage === "hoaxform" && <HoaxForm />}
+        {currentPage === "hoaxSent" && <HoaxSent />}
+      </div>
   );
 }
 
